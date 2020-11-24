@@ -25,17 +25,6 @@ action_endpoint:
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
-# tracker_store:
-#     type: mongod
-#     url: mongodb://uxl5mq7sz9vjmvrhlpe8:yPGQWlOMypGsTveW2TtA@bll2gsf0xwd15kn-mongodb.services.clever-cloud.com:27017/bll2gsf0xwd15kn
-#     db: bll2gsf0xwd15kn
-#     username: uxl5mq7sz9vjmvrhlpe8
-#     password: yPGQWlOMypGsTveW2TtA
-
-# tracker_store:
-#   type: MongoTrackerStore.MongoTrackerStore
-#   url: mongodb://uxl5mq7sz9vjmvrhlpe8:yPGQWlOMypGsTveW2TtA@bll2gsf0xwd15kn-mongodb.services.clever-cloud.com:27017/bll2gsf0xwd15kn
-
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/api/event-brokers/
 
