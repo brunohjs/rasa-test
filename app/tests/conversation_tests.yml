@@ -1,0 +1,114 @@
+version: "2.0"
+stories:
+- story: teste 1
+  steps:
+  - intent: greet
+    user: |-
+      Oi!
+  - action: action_greet
+  - action: action_menu
+  - intent: exchange_rate
+    user: |-
+      cotação
+  - action: action_exchange_rate
+  - intent: farewell
+    user: |-
+      tchau
+  - action: action_farewell
+- story: teste 2
+  steps:
+  - intent: greet
+    user: |-
+      Eai
+  - action: action_greet
+  - action: action_menu
+  - intent: conversion
+    user: |-
+      converter
+  - action: action_conversion
+  - intent: show_conversion
+    user: |-
+      quero converter [10](number) [pila](currency:real)
+  - action: action_show_conversion
+  - intent: farewell
+    user: |-
+      flw
+  - action: action_farewell
+- story: teste 3
+  steps:
+  - intent: greet
+    user: |-
+      Ola
+  - action: action_greet
+  - action: action_menu
+  - intent: currency_list
+    user: |-
+      ver moedas
+  - action: action_currency_list
+  - intent: farewell
+    user: |-
+      sair
+  - action: action_farewell
+- story: teste 4
+  steps:
+  - intent: currency_list
+    user: |-
+      quais moedas vocês trabalham?
+  - action: action_currency_list
+  - intent: exchange_rate
+    user: |-
+      agora quero ver a cotação do [real](currency:real)
+  - action: action_exchange_rate
+- story: teste 5
+  steps:
+  - intent: help
+    user: |-
+      oi quero ajuda por favor
+  - action: action_help
+  - action: action_menu
+  - intent: exchange_rate
+    user: |-
+      cotação do [dolar](currency:dolar)
+  - action: action_exchange_rate
+  - intent: farewell
+    user: |-
+      vlw
+  - action: action_farewell
+- story: teste 6
+  steps:
+  - intent: out_of_scope
+    user: |-
+      teste
+  - action: action_default_fallback
+- story: teste 7
+  steps:
+  - intent: help
+    user: |-
+      preciso de ajuda
+  - action: action_help
+  - action: action_menu
+  - intent: out_of_scope
+    user: |-
+      quero um xis
+  - action: action_default_fallback
+  - intent: farewell
+    user: |-
+      sair
+  - action: action_farewell
+- story: teste 8
+  steps:
+  - intent: greet
+    user: |-
+      [bom dia](salutation:morning), você pode me ajudar?
+  - action: action_greet
+  - action: action_menu
+- story: teste 9
+  steps:
+  - intent: out_of_scope
+    user: |-
+      quero uma bike
+  - action: action_default_fallback
+  - intent: out_of_scope
+    user: |-
+      converte uma bike pra mim
+  - action: action_default_fallback

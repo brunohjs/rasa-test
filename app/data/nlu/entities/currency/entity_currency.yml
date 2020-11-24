@@ -1,0 +1,9 @@
+version: "2.0"
+nlu:
+- intent: currency
+  examples: |
+    - [real](currency)
+    - [bitcoin](currency)
+    - [yen](currency)
+    - [dolar](currency)
+    - [euro](currency)

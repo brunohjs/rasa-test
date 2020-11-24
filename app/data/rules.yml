@@ -1,13 +1,58 @@
 version: "2.0"
 
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
+- rule: Saudação
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - or:
+    - intent: greet
+    - intent: start
+  - action: action_greet
+  - action: action_menu
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Ir para o menu
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: menu
+  - action: action_menu
+
+- rule: Se despedir
+  steps:
+  - intent: farewell
+  - action: action_farewell
+
+- rule: Se apresentar
+  steps:
+    - intent: explanation
+    - action: action_explanation
+
+- rule: Pedir ajuda
+  steps:
+  - intent: help
+  - action: action_help
+  - action: action_menu
+
+- rule: Quando não entender a mensagem do usuário (confiança baixa para a intenção)
+  steps:
+  - or:
+    - intent: nlu_fallback
+    - intent: out_of_scope
+  - action: action_default_fallback
+
+- rule: Ver lista de moedas
+  steps:
+    - intent: currency_list
+    - action: action_currency_list
+
+- rule: Ver cotação do Real
+  steps:
+  - intent: exchange_rate
+  - action: action_exchange_rate
+
+- rule: Querer converter algum valor
+  steps:
+  - intent: conversion
+  - action: action_conversion
+
+- rule: Converter valores em Reais para outras moedas
+  steps:
+  - intent: show_conversion
+  - action: action_show_conversion

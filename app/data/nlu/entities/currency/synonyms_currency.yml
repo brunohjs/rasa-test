@@ -1,0 +1,29 @@
+version: "2.0"
+nlu:
+- synonym: real
+  examples: |
+    - reais
+    - R$
+    - pila
+    - pilas
+    - conto
+    - moeda brasileira
+- synonym: dolar
+  examples: |
+    - doletas
+    - dols
+    - moeda americana
+    - $
+- synonym: euro
+  examples: |
+    - euros
+    - €
+    - moeda europeia
+- synonym: yen
+  examples: |
+    - ¥
+    - yens
+- synonym: bitcoin
+  examples: |
+    - bitcoins
+    - cripto-moeda
