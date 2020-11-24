@@ -1,3 +1,6 @@
+.DS_Store
+models/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -35,6 +38,7 @@ MANIFEST
 
 # Installer logs
 pip-log.txt
+<<<<<<< HEAD
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
@@ -127,3 +131,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+=======
+pip-delete-this-directory.txt
+>>>>>>> 088353661865411cc96dff7134d3d002d79db08d
