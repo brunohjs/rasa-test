@@ -1,7 +1,5 @@
 FROM rasa/rasa:latest
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m spacy download pt_core_news_lg
 
 COPY app /app
