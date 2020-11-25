@@ -12,6 +12,8 @@ USER root
 RUN chmod -R 777 ./
 USER 1001
 
-EXPOSE 5005 5055
+VOLUME /tmp
+
+EXPOSE 5005
 
 RUN rasa train
