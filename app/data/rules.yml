@@ -56,3 +56,8 @@ rules:
   steps:
   - intent: show_conversion
   - action: action_show_conversion
+
+- rule: Teste
+  steps:
+  - intent: test
+  - action: utter_test

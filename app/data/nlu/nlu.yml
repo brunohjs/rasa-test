@@ -167,16 +167,19 @@ nlu:
     - to indo nessa
 - intent: out_of_scope
   examples: |
-    - teste
     - previsão do tempo
     - quero comprar uma xícara
     - comprar 1000 bike
     - comprar um xis
     - quero um xis
-    - testar sua inteligência
     - converte uma bike pra mim
     - cotação da bike
     - não tem nada haver
+- intent: test
+  examples: |
+    - teste
+    - test
+    - testando
 - intent: affirm
   examples: |
     - sim
