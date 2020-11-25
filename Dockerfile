@@ -15,6 +15,4 @@ USER 1001
 
 EXPOSE 5005 5055
 
-# RUN rasa train
-
-ENTRYPOINT ["./server.sh"]
+RUN rasa train
