@@ -1,0 +1,31 @@
+version: '3'
+services:
+    chatbot:
+        image: brunohjs/rasa-test:latest
+        container_name: chatbot-rasa
+        ports:
+            - 5005:5005
+            - 443:443
+        networks: 
+            - production-network
+        command: rasa run
+    actions:
+        image: brunohjs/rasa-test:latest
+        container_name: actions-rasa
+        environment: 
+            - PYTHONUNBUFFERED=1
+        ports:
+            - 5055:5055
+        networks: 
+            - production-network
+        command: rasa run actions
+    duckling:
+        image: rasa/duckling:latest
+        container_name: duckling-rasa
+        ports:
+            - 8000:8000
+        networks: 
+            - production-network
+networks: 
+    production-network:
+        driver: bridge
